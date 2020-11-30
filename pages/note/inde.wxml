@@ -1,0 +1,19 @@
+<image class="backGround" src="{{iconUrl}}/background_wl.png"></image>
+<van-nav-bar id="nav-bar" fixed='{{true}}' placeholder='{{true}}' border='{{false}}' custom-class='back_class' bind:click-left="onClickLeft">
+	<view slot="left" class="nav_left">
+		<van-icon name="arrow-left" />
+		<text>会务手册</text>
+	</view>
+</van-nav-bar>
+<!-- <view class="header" bindtap="toDetail">
+    <view>目录</view> -->
+    <!-- <image class="icon" src="../../images/home.png"></image> -->
+<!-- </view>
+<view class='container'>
+    <view class='card_wrap'>
+        <view class='card_item' bindtouchstart='touchstart' bindtouchend="touchend" animation="{{id === 0 ? animationData : ''}}" wx:for='{{cardInfoList}}' wx:key="unique" wx:for-index="id" wx:for-item="item">
+            <image class='card-container' src="{{host}}{{item.fileUrl}}"></image>
+        </view>
+    </view>
+</view> -->
+<web-view src="https://lzzhly.wglj.liuzhou.gov.cn/meeting/index.html"></web-view>

@@ -1,0 +1,107 @@
+{
+  "pages": [
+    "pages/start/index",
+    "pages/index/index",
+    "pages/user/about/index",
+    "pages/user/index",
+    "pages/user/authentication/index",
+    "pages/note/noteIndex/index",
+    "pages/guide/weather/index",
+    "pages/allGuide/index",
+    "pages/DirectSeeding/picture-next/index",
+    "pages/DirectSeeding/picture-detail/index",
+    "pages/DirectSeeding/index",
+    "pages/note/inde",
+    "pages/index/column/toNewsDetail/index",
+    "pages/index/column-replay/replay-radio/index",
+    "pages/guide/index",
+    "pages/live/radio/index",
+    "pages/guide/detail/index",
+    "pages/index/column/index",
+    "pages/index/newsDetail/index",
+    "pages/index/search/index",
+    "pages/logIn/index",
+    "pages/live/index",
+    "pages/pictureLive/index",
+    "pages/pictureLive/picture-detail/index",
+    "pages/index/mesDetail/index",
+    "pages/index/column-replay/index",
+    "pages/logs/logs",
+    "pages/poster/index",
+    "pages/guide/guideMap/index",
+    "pages/guide/guideMapTwo/index",
+    "pages/guide/tencentMap/index",
+    "pages/user/editPerson/index",
+    "pages/index/picture/picture-detail/index",
+    "pages/DirectSeeding/seedingRadio/index",
+    "pages/live/live-picture/index",
+    "pages/live/live-pictureNext/index",
+    "pages/allGuide/mapDetail/index",
+    "pages/DirectSeeding/picture-three/index",
+    "pages/live/live-pictureThree/index",
+    "pages/note/one/index",
+    "pages/note/two/index",
+    "pages/note/three/index",
+    "pages/note/four/index",
+    "pages/note/five/index",
+    "pages/note/six/index",
+    "pages/note/seven/index",
+    "pages/note/eight/index",
+    "pages/checkIn/index",
+    "pages/index/healthCode/index",
+    "pages/index/healthCode/healthQrCode/index",
+    "pages/signin/index",
+    "pages/checkIn/hotel/index",
+    "pages/checkIn/manual/index",
+    "pages/user/detail/index",
+    "pages/note/special/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "2020广西文化旅游发展大会",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "backgroundColor": "#ffffff",
+    "borderStyle": "white",
+    "selectedColor": "#326ced",
+    "color": "#a8a8a8",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "/images/pic-1.png",
+        "selectedIconPath": "/images/pic1.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/signin/index",
+        "iconPath": "/images/pic-5.png",
+        "selectedIconPath": "/images/pic5.png",
+        "text": "报到"
+      },
+      {
+        "pagePath": "pages/checkIn/index",
+        "iconPath": "/images/pic-4.png",
+        "selectedIconPath": "/images/pic4.png",
+        "text": "快速入住"
+      },
+      {
+        "pagePath": "pages/user/index",
+        "iconPath": "/images/pic-3.png",
+        "selectedIconPath": "/images/pic3.png",
+        "text": "联系我们"
+      }
+    ]
+  },
+  "usingComponents": {},
+  "sitemapLocation": "sitemap.json",
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  },
+  "navigateToMiniProgramAppIdList": [
+    "wxa2672720f50a4fb5"
+  ]
+}

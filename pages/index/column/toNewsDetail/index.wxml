@@ -1,0 +1,23 @@
+<!--pages/index/newsDetail/index.wxml-->
+<import src="../../../../components/wxParse/wxParse.wxml"/> 
+
+<van-nav-bar id="nav-bar" fixed='{{true}}' placeholder='{{true}}' border='{{false}}' custom-class='back_class' bind:click-left="onClickLeft">
+	<view slot="left" class="nav_left">
+		<van-icon name="arrow-left" />
+		<text>资讯详情</text>
+	</view>
+</van-nav-bar>
+<view class="title">{{detailData.title}}</view>
+<view class="txt">{{detailData.describes}}</view>
+<view class="time">
+	<view class="source" wx:if="{{detailData.source}}">{{detailData.source}}</view>
+	<view class="reporter" wx:if="{{detailData.reporter}}">记者 {{detailData.reporter}}</view>
+	<view class="">{{detailData.createTime}}</view>
+</view>
+<view class="cont">
+			<!-- 解析图片base64的方法 -->
+	<template is="wxParse" data="{{wxParseData:courseDetail.nodes}}" />
+	<!-- <rich-text nodes="{{detailData.content}}"></rich-text> -->
+</view>
+<view class="reviewer" wx:if="{{detailData.reviewer}}">审核：{{detailData.reviewer}}</view>
+<view class="reviewer" wx:if="{{detailData.editor}}">编辑：{{detailData.editor}}</view>

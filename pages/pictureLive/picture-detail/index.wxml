@@ -1,0 +1,72 @@
+<!--pages/DirectSeeding/picture-detail/index.wxml-->
+<van-nav-bar id="nav-bar" fixed='{{true}}' placeholder='{{true}}' border='{{false}}' custom-class='back_class'
+  bind:click-left="onClickLeft">
+  <view slot="left" class="nav_left">
+    <van-icon name="arrow-left" />
+    <text>图片集锦</text>
+  </view>
+  <view class=" loading " hidden="{{searchLoading}} " bindtap="onClickMore">点击载入更多...</view>
+  <view class="loading " hidden="{{!searchLoading}} ">已加载全部</view>
+</van-nav-bar>
+<image class="backGround" src="{{iconUrl}}/background_wl.png"></image>
+<image class="back" src="{{iconUrl}}/back_wl.png"></image>
+<image class="icon" src="{{iconUrl}}/advator_wl.png"></image>
+<view class="title">柳州市文化广电和旅游局</view>
+<view class="time">{{detailData.createTime}}</view>
+<!-- <view class="font">
+  <image class="good like" src="{{iconUrl}}/good_wl.png"></image>
+  <text class="num number">{{detailData.totalLikeCount}}</text>
+  <image class="good share" src="{{iconUrl}}/share_wl.png"></image>
+  <text class="num">{{detailData.totalShareCount}}</text>
+</view> -->
+<view class="footer" wx:for="{{detailData.pictures}}"  wx:key='index'>
+  <image class="img" src="{{host}}{{item.url}}"></image>
+  <image class="hot" src="{{iconUrl}}/huore.png"></image>
+  <!-- <view class="iconfont">
+    <image src="{{iconUrl}}/toShare_wl.png" class="icon-1 fl-1"></image>
+    <text class="much fl-2">{{items.shareCount ? items.shareCount : '0'}}</text>
+    <image src="{{iconUrl}}/toGood_wl.png" class="icon-1 fl-3"></image>
+    <text class="much">{{items.likeCount ? items.likeCount: 0}}</text>
+  </view> -->
+</view>
+<!-- <view class="footer">
+  <image class="img" src="{{imgUrl}}/NoPath-2.png"></image>
+  <image class="hot" src="{{iconUrl}}/huore.png"></image>
+  <view class="iconfont">
+    <image src="{{iconUrl}}/toShare_wl.png" class="icon-1 fl-1"></image>
+    <text class="much fl-2">1254</text>
+    <image src="{{iconUrl}}/toGood_wl.png" class="icon-1 fl-3"></image>
+    <text class="much">868</text>
+  </view>
+</view>
+<view class="footer">
+  <image class="img" src="{{imgUrl}}/NoPath-3.png"></image>
+  <image class="hot" src="{{iconUrl}}/huore.png"></image>
+  <view class="iconfont">
+    <image src="{{iconUrl}}/toShare_wl.png" class="icon-1 fl-1"></image>
+    <text class="much fl-2">1561</text>
+    <image src="{{iconUrl}}/toGood_wl.png" class="icon-1 fl-3"></image>
+    <text class="much">968</text>
+  </view>
+</view>
+<view class="footer">
+  <image class="img" src="{{imgUrl}}/NoPath-4.png"></image>
+  <image class="hot" src="{{iconUrl}}/huore.png"></image>
+  <view class="iconfont">
+    <image src="{{iconUrl}}/toShare_wl.png" class="icon-1 fl-1"></image>
+    <text class="much fl-2">515</text>
+    <image src="{{iconUrl}}/toGood_wl.png" class="icon-1 fl-3"></image>
+    <text class="much">516</text>
+  </view>
+</view>
+<view class="footer">
+  <image class="img" src="{{imgUrl}}/NoPath-5.png"></image>
+  <image class="hot" src="{{iconUrl}}/huore.png"></image>
+  <view class="iconfont">
+    <image src="{{iconUrl}}/toShare_wl.png" class="icon-1 fl-1"></image>
+    <text class="much fl-2">862</text>
+    <image src="{{iconUrl}}/toGood_wl.png" class="icon-1 fl-3"></image>
+    <text class="much">469</text>
+  </view>
+</view> -->
+

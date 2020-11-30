@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "van-tab": "/vant/tab/index",
+    "van-tabs": "/vant/tabs/index",
+    "van-nav-bar":"/vant/nav-bar/index",
+    "van-icon":"/vant/icon/index",
+    "custom-map": "/components/map/index"
+  },
+  "navigationStyle":"custom"
+}

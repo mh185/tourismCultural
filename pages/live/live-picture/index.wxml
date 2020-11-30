@@ -1,0 +1,67 @@
+<!--pages/DirectSeeding/picture-detail/index.wxml-->
+<image class="backGround" src="{{iconUrl}}/background_wl.png"></image>
+<van-nav-bar id="nav-bar" fixed='{{true}}' placeholder='{{true}}' border='{{false}}' custom-class='back_class' bind:click-left="onClickLeft">
+	<view slot="left" class="nav_left">
+		<van-icon name="arrow-left" />
+		<text>图文直播</text>
+	</view>
+</van-nav-bar>
+<!-- 详情 -->
+<image class="top_img" src="{{host}}{{WrittenLiveList.topUrl}}"/>
+<view class="title_box">
+	<view class="content">
+		<rich-text nodes="{{WrittenLiveList.title}}"></rich-text>
+	</view>
+	<view class="time_box">
+		<view class="time">{{WrittenLiveList.createTime}}</view>
+		<view class="see"><image class="see_img" src="../../../images/see2.png" />{{WrittenLiveList.watchCount ? WrittenLiveList.watchCount : 0}}</view>
+	</view>
+</view>
+<!-- active="{{ active }}" -->
+<view class="mainBox">
+	<view class="main">
+		<view class="one" wx:for="{{footerList}}" wx:key="index">
+			<view class="leftLine">
+				<view class="circle"></view>
+				<view class="Line"></view>
+			</view>
+			<view class="timer">{{item.createTime}}</view>
+			<view class="word">
+				<view class="tvName">
+					<image class="tv_img" src="../../../images/actor.png" />
+					<text class="tv_text">	柳州电视台</text>
+				</view>
+				<rich-text class="count" nodes="{{item.content}}"></rich-text>
+			</view>
+	</view>
+  
+	</view>
+</view>
+<!-- <view class="list_box">
+	<image class="back" src="{{iconUrl}}/back_wl.png"></image>
+	<image class="icon" src="{{iconUrl}}/advator_wl.png"></image>
+	<view class="title">柳州市文化广电和旅游局</view>
+	<view class="time">{{footerList.createTime}}</view>
+	<view class="font">
+		<image class="good like" src="{{iconUrl}}/good_wl.png"></image>
+		<text class="num number">{{footerList.likeCounts}}</text>
+		<image class="good share" src="{{iconUrl}}/share_wl.png"></image>
+		<text class="num">{{footerList.shareCounts}}</text>
+	</view>
+	<view class="footer" wx:for='{{footerList.pictures}}' wx:key='index'>
+		<image class="img" src="{{host}}{{item.url}}"></image>
+		<image class="hot" src="{{iconUrl}}/huore.png"></image>
+    <image class="huomiao" src="{{iconUrl}}/huomiao.gif"></image>
+		<view class="iconfont">
+      <view class="fourteen_left">
+        <button data-imgId='{{item.id}}' class="but" open-type="share"><image src="{{iconUrl}}/toShare_wl.png" /></button>
+          {{item.shareCount == null?'0':item.shareCount}}
+      </view>
+      <view class="four_right" data-imgId='{{item.id}}' bindtap="clickFabulous">
+        <image wx:if='{{item.userIsLike == 0}}' src="{{iconUrl}}/toGood_wl.png" />
+        <image wx:else src="{{iconUrl}}/praise2.png" />
+        {{item.likeCount}}
+      </view>
+		</view>
+	</view>
+</view> -->

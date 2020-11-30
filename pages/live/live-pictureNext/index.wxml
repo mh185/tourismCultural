@@ -1,0 +1,75 @@
+<!--pages/DirectSeeding/picture-detail/index.wxml-->
+<image class="backGround" src="{{iconUrl}}/background_wl.png"></image>
+<van-nav-bar id="nav-bar" fixed='{{true}}' placeholder='{{true}}' border='{{false}}' custom-class='back_class' bind:click-left="onClickLeft">
+	<view slot="left" class="nav_left">
+		<van-icon name="arrow-left" />
+		<text>图片直播</text>
+	</view>
+</van-nav-bar>
+<view class="list_box">
+	<image class="back" src="{{iconUrl}}/back_wl.png"></image>
+	<image class="icon" src="{{iconUrl}}/advator_wl.png"></image>
+	<view class="title">柳州市文化广电和旅游局</view>
+	<view class="time">2020-09-23 10:00</view>
+	<view class="font">
+		<image class="good like" src="{{iconUrl}}/good_wl.png"></image>
+		<text class="num number">3265</text>
+		<image class="good share" src="{{iconUrl}}/share_wl.png"></image>
+		<text class="num">2165</text>
+	</view>
+	<view class="footer">
+		<image class="img" src="{{imgUrl}}/NoPath-6.png"></image>
+		<image class="hot" src="{{iconUrl}}/huore.png"></image>
+		<image class="huomiao" src="{{iconUrl}}/huomiao.gif"></image>
+		<view class="iconfont">
+			<image src="{{iconUrl}}/toShare_wl.png" class="icon-1 fl-1"></image>
+			<text class="much fl-2">921</text>
+			<image src="{{iconUrl}}/toGood_wl.png" class="icon-1 fl-3"></image>
+			<text class="much">632</text>
+		</view>
+	</view>
+	<view class="footer">
+		<image class="img" src="{{imgUrl}}/NoPath-7.png"></image>
+		<image class="hot" src="{{iconUrl}}/huore.png"></image>
+		<image class="huomiao" src="{{iconUrl}}/huomiao.gif"></image>
+		<view class="iconfont">
+			<image src="{{iconUrl}}/toShare_wl.png" class="icon-1 fl-1"></image>
+			<text class="much fl-2">821</text>
+			<image src="{{iconUrl}}/toGood_wl.png" class="icon-1 fl-3"></image>
+			<text class="much">581</text>
+		</view>
+	</view>
+	<view class="footer">
+		<image class="img" src="{{imgUrl}}/NoPath-8.png"></image>
+		<image class="hot" src="{{iconUrl}}/huore.png"></image>
+		<image class="huomiao" src="{{iconUrl}}/huomiao.gif"></image>
+		<view class="iconfont">
+			<image src="{{iconUrl}}/toShare_wl.png" class="icon-1 fl-1"></image>
+			<text class="much fl-2">926</text>
+			<image src="{{iconUrl}}/toGood_wl.png" class="icon-1 fl-3"></image>
+			<text class="much">718</text>
+		</view>
+	</view>
+	<view class="footer">
+		<image class="img" src="{{imgUrl}}/NoPath-9.png"></image>
+		<image class="hot" src="{{iconUrl}}/huore.png"></image>
+		<image class="huomiao" src="{{iconUrl}}/huomiao.gif"></image>
+		<view class="iconfont">
+			<image src="{{iconUrl}}/toShare_wl.png" class="icon-1 fl-1"></image>
+			<text class="much fl-2">812</text>
+			<image src="{{iconUrl}}/toGood_wl.png" class="icon-1 fl-3"></image>
+			<text class="much">618</text>
+		</view>
+	</view>
+	<view class="footer">
+		<image class="img" src="{{imgUrl}}/NoPath-10.png"></image>
+		<image class="hot" src="{{iconUrl}}/huore.png"></image>
+		<image class="huomiao" src="{{iconUrl}}/huomiao.gif"></image>
+		<view class="iconfont">
+			<image src="{{iconUrl}}/toShare_wl.png" class="icon-1 fl-1"></image>
+			<text class="much fl-2">513</text>
+			<image src="{{iconUrl}}/toGood_wl.png" class="icon-1 fl-3"></image>
+			<text class="much">411</text>
+		</view>
+	</view>
+</view>

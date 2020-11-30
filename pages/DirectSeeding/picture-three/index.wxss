@@ -1,0 +1,130 @@
+/* pages/DirectSeeding/picture-detail/index.wxss */
+.van-nav-bar__left,.van-nav-bar__right {
+  bottom: unset !important;
+}
+.nav_left{
+  display: flex;
+  font-size: 40rpx;
+  color: #000000;
+  font-weight: 500;
+  font-family: Source Han Serif CN;
+}
+.nav_left .nav_left_text{
+    margin-left:224rpx;
+}
+.backGround{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -99;
+}
+page{
+  padding: 0 30rpx;
+}
+.back{
+  width: 690rpx;
+  height: 334rpx;
+  margin:20rpx auto;
+  position: relative;
+  z-index: -9;
+  margin-bottom: 20rpx;
+} 
+.icon{
+  position: absolute;
+  top: 234rpx;
+  left: 316rpx;
+  width: 120rpx;
+  height: 120rpx;
+}
+.title{
+  position: absolute;
+  top: 368rpx;
+  left: 216rpx;
+}
+.time{
+  position: absolute;
+  top: 406rpx;
+  left: 282rpx;
+}
+.title{
+  font-size: 28rpx;
+  font-family: PingFang SC;
+  font-weight: bold;
+  line-height: 44rpx;
+  color: #212121;
+}
+.time{
+  font-size: 22rpx; 
+  font-family: PingFang SC;
+  font-weight: 400;
+  line-height: 40rpx;
+  color: #C8C8C8;
+}
+.good{
+  width: 22rpx;
+  height: 22rpx;
+}
+.num{
+  font-size: 20rpx;
+  font-family: PingFang SC;
+  font-weight: 400;
+  line-height: 28rpx;
+  color: #999999;
+  opacity: 0.81;
+}
+.font{
+  position: absolute;
+  left: 288rpx;
+  top: 454rpx;
+}
+.like{
+  margin-right: 8rpx;
+}
+.number{
+  margin-right: 42rpx;
+}
+.share{
+  margin-right: 8rpx;
+}
+.img{
+  width: 690rpx;
+  height: 388rpx;
+}
+.footer{
+  position: relative;
+  margin-bottom: 14rpx;
+}
+.hot{
+  width: 104rpx;
+  height: 40rpx;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.icon-1{
+  width: 40rpx;
+  height:40rpx;
+}
+.much{
+  font-size: 24rpx;
+  font-family: PingFang SC;
+  font-weight: 400;
+  line-height: 34rpx;
+  color: #ffffff;
+
+}
+.iconfont{
+  display: flex;
+  align-items: center;
+  position: absolute;
+  bottom: 24rpx;
+  right: 88rpx;
+}
+.fl-1{
+  margin-right: 8rpx;
+}
+.fl-2{
+  margin-right: 16rpx;
+}

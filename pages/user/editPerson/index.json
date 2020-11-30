@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "van-nav-bar": "/vant/nav-bar/index",
+    "van-icon":"/vant/icon/index"
+  },
+  "navigationBarBackgroundColor": "#fff",
+  "navigationStyle":"custom"
+}

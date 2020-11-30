@@ -1,0 +1,138 @@
+<image class="backGround" src="{{iconUrl}}/background_wl.png"></image>
+<van-nav-bar id="nav-bar" fixed='{{true}}' placeholder='{{true}}' border='{{false}}' custom-class='back_class'
+	bind:click-left="onClickLeft">
+	<view slot="left" class="nav_left">
+		<text>图片直播</text>
+	</view>
+</van-nav-bar>
+<!-- 搜索框 -->
+<view>
+	<van-search class="search" input-class='search_input' value="{{ value }}" placeholder="搜索在线直播名称/电视台名称"
+		use-action-slot bind:search="onSearch" background="#ffffff">
+	</van-search>
+</view>
+<!-- <image class="line" src="{{iconUrl}}/line_wl.png"></image> -->
+<van-tabs active="{{ active }}" bind:change="onChange" color="#326ced">
+	<van-tab title="正在直播">
+		<view class="wrap" wx:for="{{listData}}" wx:key="index" bindtap="toRadio" data-id="{{item.id}}">
+			<image class="img" src="{{host}}{{item.coverUrl}}"></image>
+			<image class="hot" src="{{iconUrl}}/huore.png"></image>
+			<image class="adv" src="{{iconUrl}}/advator_wl.png"></image>
+			<view class="tv">柳州市文化广电和旅游局</view>
+			<view class="footer">
+				<view class="title">{{item.title}}</view>
+			</view>
+		</view>
+	</van-tab>
+	<van-tab title="图片直播">
+		<!-- wx:for="{{5}}" wx:key="index" -->
+		<view  class="main" bindtap="toPicture" >
+			<view class="station">
+				<image class="left" src="{{iconUrl}}/advator_wl.png"></image>
+				<view class="right">
+					<view class="txt-1">柳州市文化广电和旅游局</view>
+					<view class="txt-2">2020-10-01 9:30</view>
+				</view>
+				<view class="all">
+					<image class="good" src="{{iconUrl}}/good_wl.png"></image>
+					<text class="good_num">6531</text>
+					<image class="share" src="{{iconUrl}}/share_wl.png"></image>
+					<text class="share_num">4582</text>
+				</view>
+			</view>
+			<!-- 图文直播图片 -->
+			<scroll-view scroll-x="true" class="scorll">
+				<view class="uploadWrap" scroll-x="true">
+					<!-- wx:for="{{5}}"  wx:key="index" -->
+					<view class="upload_Item"  bindtap="toRadioDetail" data-id="{{detailList.id}}">
+						<image class="upload_Item_img" src="{{imgUrl}}/NoPath-1.png"></image>
+					</view>
+					<view class="upload_Item"  bindtap="toRadioDetail" data-id="{{detailList.id}}">
+						<image class="upload_Item_img" src="{{imgUrl}}/NoPath-2.png"></image>
+					</view>
+					<view class="upload_Item"  bindtap="toRadioDetail" data-id="{{detailList.id}}">
+						<image class="upload_Item_img" src="{{imgUrl}}/NoPath-3.png"></image>
+					</view>
+					<view class="upload_Item"  bindtap="toRadioDetail" data-id="{{detailList.id}}">
+						<image class="upload_Item_img" src="{{imgUrl}}/NoPath-4.png"></image>
+					</view>
+					<view class="upload_Item"  bindtap="toRadioDetail" data-id="{{detailList.id}}">
+						<image class="upload_Item_img" src="{{imgUrl}}/NoPath-5.png"></image>
+					</view>
+				</view>
+			</scroll-view>
+		</view>
+		<view  class="main" bindtap="toPictureNext" >
+			<view class="station">
+				<image class="left" src="{{iconUrl}}/advator_wl.png"></image>
+				<view class="right">
+					<view class="txt-1">柳州市文化广电和旅游局</view>
+					<view class="txt-2">2020-09-23 10:00</view>
+				</view>
+				<view class="all">
+					<image class="good" src="{{iconUrl}}/good_wl.png"></image>
+					<text class="good_num">3265</text>
+					<image class="share" src="{{iconUrl}}/share_wl.png"></image>
+					<text class="share_num">2165</text>
+				</view>
+			</view>
+			<!-- 图文直播图片 -->
+			<scroll-view scroll-x="true" class="scorll">
+				<view class="uploadWrap" scroll-x="true">
+					<!-- wx:for="{{5}}"  wx:key="index" -->
+					<view class="upload_Item"  bindtap="toRadioDetail" data-id="{{detailList.id}}">
+						<image class="upload_Item_img" src="{{imgUrl}}/NoPath-6.png"></image>
+					</view>
+					<view class="upload_Item"  bindtap="toRadioDetail" data-id="{{detailList.id}}">
+						<image class="upload_Item_img" src="{{imgUrl}}/NoPath-7.png"></image>
+					</view>
+					<view class="upload_Item"  bindtap="toRadioDetail" data-id="{{detailList.id}}">
+						<image class="upload_Item_img" src="{{imgUrl}}/NoPath-8.png"></image>
+					</view>
+					<view class="upload_Item"  bindtap="toRadioDetail" data-id="{{detailList.id}}">
+						<image class="upload_Item_img" src="{{imgUrl}}/NoPath-9.png"></image>
+					</view>
+					<view class="upload_Item"  bindtap="toRadioDetail" data-id="{{detailList.id}}">
+						<image class="upload_Item_img" src="{{imgUrl}}/NoPath-10.png"></image>
+					</view>
+				</view>
+			</scroll-view>
+		</view>
+		<view  class="main" bindtap="toPictureThree" >
+			<view class="station">
+				<image class="left" src="{{iconUrl}}/advator_wl.png"></image>
+				<view class="right">
+					<view class="txt-1">柳州市文化广电和旅游局</view>
+					<view class="txt-2">2020-09-16 14:30</view>
+				</view>
+				<view class="all">
+					<image class="good" src="{{iconUrl}}/good_wl.png"></image>
+					<text class="good_num">5611</text>
+					<image class="share" src="{{iconUrl}}/share_wl.png"></image>
+					<text class="share_num">3220</text>
+				</view>
+			</view>
+			<!-- 图文直播图片 -->
+			<scroll-view scroll-x="true" class="scorll">
+				<view class="uploadWrap" scroll-x="true">
+					<!-- wx:for="{{5}}"  wx:key="index" -->
+					<view class="upload_Item"  bindtap="toRadioDetail" data-id="{{detailList.id}}">
+						<image class="upload_Item_img" src="{{imgUrl}}/NoPath-11.png"></image>
+					</view>
+					<view class="upload_Item"  bindtap="toRadioDetail" data-id="{{detailList.id}}">
+						<image class="upload_Item_img" src="{{imgUrl}}/NoPath-12.png"></image>
+					</view>
+					<view class="upload_Item"  bindtap="toRadioDetail" data-id="{{detailList.id}}">
+						<image class="upload_Item_img" src="{{imgUrl}}/NoPath-13.png"></image>
+					</view>
+					<view class="upload_Item"  bindtap="toRadioDetail" data-id="{{detailList.id}}">
+						<image class="upload_Item_img" src="{{imgUrl}}/NoPath-14.png"></image>
+					</view>
+					<view class="upload_Item"  bindtap="toRadioDetail" data-id="{{detailList.id}}">
+						<image class="upload_Item_img" src="{{imgUrl}}/NoPath-15.png"></image>
+					</view>
+				</view>
+			</scroll-view>
+		</view>
+	</van-tab>
+</van-tabs>

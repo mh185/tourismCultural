@@ -1,0 +1,90 @@
+<!--pages/pictureLive/index.wxml-->
+<image class="backGround" src="{{iconUrl}}/background_wl.png"></image>
+<van-nav-bar id="nav-bar" fixed='{{true}}' placeholder='{{true}}' border='{{false}}' custom-class='back_class' bind:click-left="onClickLeft">
+  <view slot="left" class="nav_left">
+    <van-icon name="arrow-left" />
+    <text>图片集锦</text>
+  </view>
+</van-nav-bar>
+
+<!-- 搜索框 -->
+<view>
+	<van-search class="search" input-class='search_input' value="{{ keyword }}" placeholder="搜索标题名称"
+		use-action-slot bind:search="onSearch" background="#ffffff">
+	</van-search>
+</view>
+
+<!-- <view class="main" ">
+      <view class="station">
+        <image class="left" src="{{iconUrl}}/advator_wl.png"></image>
+        <view class="right">
+          <view class="txt-1">柳州市文化广电和旅游局</view>
+          <view class="txt-2">{{item.createTime}}</view>
+        </view>
+        <view class="all">
+          <image class="good" src="{{iconUrl}}/good_wl.png"></image>
+          <text class="good_num">{{item.likeCounts}}</text>
+          <image class="share" src="{{iconUrl}}/share_wl.png"></image>
+          <text class="share_num">{{item.shareCounts}}</text>
+        </view>
+      </view>
+        <scroll-view scroll-x="true" class="scorll" bindscroll="scroll" style="width: 100%" >
+          <view class="uploadWrap">
+          <view class="upload_Item" wx:for="{{item.pictures}}" wx:for-index="_index" wx:for-item="_item" wx:key="_index">
+            <image class="upload_Item_img" src="{{host}}{{_item.url}}"></image>
+          </view>
+        </view>
+      </scroll-view>
+    </view> -->
+<!-- <van-tabs active="{{ active }}" color="#326ced"> -->
+  <!-- <van-tab title="图文直播">
+    图文直播内容列表
+    <view class="list_box" bindtap="toWritten"  wx:for='{{WrittenLiveList}}' wx:key='index' data-id="{{item.id}}">
+      <image class="list_img" src="{{host}}{{item.coverUrl}}"></image>
+      <view class="list_title">
+        <view class="name">
+          <rich-text nodes="{{name}}"></rich-text>
+        </view>
+        <view class="name">{{item.title}}</view>
+        <view class="time_box">
+          <view class="time">{{item.createTime}}</view>
+          <view class="see"><image class="see_img" src="../../images/see.png" />{{item.watchCount}}</view>
+        </view>
+      </view>
+      <view class="title_bj"></view>
+    </view>
+    <view class=" loading " hidden="{{searchLoading}} " bindtap="onClickMore ">点击载入更多...</view>
+    <view class="loading " hidden="{{!searchLoading}} ">已加载全部</view>
+  </van-tab> -->
+
+  <!-- <van-tab title="图片直播"> -->
+    <view  class="main" bindtap="toPicture" wx:for='{{pictureLiveList}}' wx:key='index' data-id="{{item.id}}" >
+			<view class="station">
+				<image class="left" src="{{iconUrl}}/advator_wl.png"></image>
+				<view class="right">
+					<view class="txt-1">柳州市文化广电和旅游局</view>
+					<view class="txt-2">{{item.createTime}}</view>
+				</view>
+				<!-- <view class="all">
+					<image class="good" src="{{iconUrl}}/good_wl.png"></image>
+					<text class="good_num">{{item.likeCounts}}</text>
+					<image class="share" src="{{iconUrl}}/share_wl.png"></image>
+					<text class="share_num">{{item.shareCounts}}</text>
+				</view> -->
+			</view>
+			<!-- 图片直播图片 -->
+			<scroll-view scroll-x="true" class="scorll">
+				<view class="uploadWrap">
+          <!-- <view class="upload_Item">
+            <rich-text nodes="{{item.content}}"></rich-text>
+          </view> -->
+					<view class="upload_Item" scroll-x="true" wx:for="{{item.pictures}}" wx:for-item="items"  wx:key="index" >
+            <!-- 图片不变形设置mode="aspectFill" -->
+						<!-- <image class="upload_Item_img" data-src="{{host}}{{items.url}}" src="{{host}}{{items.url}}" mode="widthFix" bindtap='clickImg'></image> -->
+						<image class="upload_Item_img" data-src="{{items.url}}" data-index="{{index}}" data-pictures="{{item.pictures}}" src="{{host}}{{items.url}}" bindtap='clickImg'></image>
+					</view>
+				</view>
+      </scroll-view>
+    </view>
+  <!-- </van-tab> -->
+<!-- </van-tabs> -->

@@ -1,0 +1,3 @@
+<!--pages/checkIn/hotel/index.wxml-->
+<web-view class="hotel" src='{{url}}'></web-view>
+<!-- <text>pages/checkIn/hotel/index.wxml</text> -->

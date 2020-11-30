@@ -1,0 +1,25 @@
+<!--pages/user/about/index.wxml-->
+<!-- <view>
+  <image class="img" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1601116435430&di=885f862965298911a57f509e2f291a38&imgtype=0&src=http%3A%2F%2Fn.sinaimg.cn%2Fsinacn%2Fw1014h521%2F20180118%2Fe36d-fyqtwzu2012084.png"></image>
+</view> -->
+<import src="../../../components/wxParse/wxParse.wxml"/> 
+<van-nav-bar id="nav-bar" fixed='{{true}}' placeholder='{{true}}' border='{{false}}' custom-class='back_class' bind:click-left="onClickLeft">
+	<view slot="left" class="nav_left">
+		<van-icon name="arrow-left" />
+		<text>柳州概况</text>
+	</view>
+</van-nav-bar>
+<!-- <video  class="tv"  src=""></video> -->
+<!-- <video id="myvideo" bindplay='playVideo' autoplay='true' src="{{path}}" bindfullscreenchange="fullScreen"  bindended="closeVideo"  controls poster="" requestFullScreen="true">
+  </video>  -->
+<view class="txt">
+  <!-- 解析图片base64的方法 -->
+  <template is="wxParse" data="{{wxParseData:courseDetail.nodes}}" />
+  <!-- <rich-text nodes="{{contentData.content}}"></rich-text> -->
+</view>
+<!-- <view>
+  <image class="img" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1601116435430&di=885f862965298911a57f509e2f291a38&imgtype=0&src=http%3A%2F%2Fn.sinaimg.cn%2Fsinacn%2Fw1014h521%2F20180118%2Fe36d-fyqtwzu2012084.png"></image>
+</view> -->
+<!-- <view class="txt-1">
+  为深入贯彻落实党中央、国务院关于促进文化建设和旅游发展的重大决策部署，落实2019年广西文化旅游发展大会的精神，加快。
+</view> -->

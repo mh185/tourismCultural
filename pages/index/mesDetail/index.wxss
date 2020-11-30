@@ -1,0 +1,56 @@
+/* pages/index/mesDetail/index.wxss */
+.title{
+  font-size:32rpx;
+  font-family: PingFang SC, PingFang SC-Heavy;
+  font-weight: 800;
+  color: #1d1d1d;
+  margin-top: 60rpx;
+  margin-left: 46rpx;
+}
+.time{
+  font-size: 24rpx;
+  font-family: PingFang SC, PingFang SC-Heavy;
+  font-weight: 800;
+  color: #333333;
+  margin: 22rpx 0 22rpx 46rpx;
+}
+.img{
+  width: 658rpx;
+  height:264rpx;
+  border: 1rpx solid #000000;
+  background: rgba(0,0,0,0);
+  border-radius:8rpx;
+  margin: 0 46rpx 40rpx 46rpx ;
+}
+.content{
+  font-size: 30rpx;
+  font-family: PingFang SC, PingFang SC-Regular;
+  font-weight: 400;
+  color: #1d1d1d;
+  line-height: 40rpx;
+  margin: 0 46rpx 40rpx 46rpx;
+  text-align: justify;
+  text-indent: 1rem;
+}
+.footer{
+  font-size: 24rpx;
+  font-family: PingFang SC, PingFang SC-Regular;
+  font-weight: 400;
+  color: #1d1d1d;
+  line-height: 40rpx;
+  text-align: justify;
+  margin: 0 46rpx 40rpx 46rpx;
+}
+.van-nav-bar__left,.van-nav-bar__right {
+  bottom: unset !important;
+}
+.nav_left{
+  display: flex;
+  font-size: 40rpx;
+  color: #000000;
+  font-weight: 500;
+  font-family: Source Han Serif CN;
+}
+.nav_left .nav_left_text{
+    margin-left:224rpx;
+}

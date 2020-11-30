@@ -1,0 +1,2 @@
+<!--pages/allGuide/mapDetail/index.wxml-->
+<web-view src="{{imgUrl}}"></web-view>

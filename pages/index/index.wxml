@@ -1,0 +1,232 @@
+<image class="backGround" src="{{iconUrl}}/background_wl.png"></image>
+<van-nav-bar class="navbar">
+	<view slot="left" class="left">
+		<image class="header_logo" src="{{iconUrl}}/header_logo.png"></image>
+		2020广西文化旅游发展大会
+	</view>
+</van-nav-bar>
+<view class="bannerBack" bindtap="toHide" wx:if="{{show}}"></view>
+<view>
+	<!-- <video    src="https://lzzhly.wglj.liuzhou.gov.cn/upload/2020-10-17/1602901056182.mp4"></video> -->
+	<video id="myvideo" class="tv" wx:if="{{show}}" bindplay='playVideo' autoplay='true' src="{{path}}" bindfullscreenchange="fullScreen" bindended="closeVideo" controls poster="" requestFullScreen="true" x5-playsinline="true">
+	</video>
+	<view catchtap="toHide" wx:if="{{show}}" class="close">x</view>
+</view>
+<!-- 会议议程 -->
+<van-popup bind:click-overlay='haveRead' class="pop_box" show="{{ showPop }}" bind:close="onClose">
+	<view class="meeting_box">
+		<view class="meeting_agenda_box">
+			<view class="rectangle_blue"></view>
+			<view class="meeting_top">会议议程</view>
+			<view class="rectangle_blue_right"></view>
+		</view>
+		<view class="rich">
+			<rich-text nodes="{{content}}"></rich-text>
+		</view>
+		<view class="meeting_bottom_box">
+			<view class="meeting_bottom" bindtap="haveRead">我已阅读</view>
+		</view>
+	</view>
+
+</van-popup>
+<!-- <view class="meeting_box" wx:if="{{show}}">
+  <view class="meeting_agenda_box">
+    <view class="rectangle_blue"></view>
+    <view class="meeting_top">会议议程</view>
+    <view class="rectangle_blue_right"></view>
+  </view>
+  <view class="rich">
+    <rich-text nodes="{{content}}"></rich-text>
+  </view>
+  <view class="meeting_bottom" bindtap="haveRead">
+    我已阅读
+  </view>
+</view> -->
+<!-- 公告 -->
+<view class="top_box">
+	<view class="meg">
+		<image class="meg-img" src="{{iconUrl}}/voice.png"></image>
+		<view class="marquee">
+			<view>
+				<text wx:for='{{msgList}}' wx:key="index" class="marquee_text" data-id='{{item.id}}' bindtap="toMegDetail">{{item.title}}</text>
+			</view>
+		</view>
+		<!-- <swiper class='swiper-container' autoplay='true' circular='true' interval='3000'>
+      <block wx:for='{{msgList}}' wx:key="index">
+        <swiper-item>
+          <view class='swiper-item' data-id='{{item.id}}' bindtap="toMegDetail">{{item.title}}</view>
+        </swiper-item>
+      </block>
+    </swiper> -->
+	</view>
+	<!-- 天气 -->
+	<view class="tianqi_box" bindtap="toWeather">
+		<image class="tianqi_img" src="{{weatherImg.max_img}}"></image>
+		<text class="tianqi_text">{{weather}}</text>
+		<!-- <text class="tianqi_text">31</text> -->
+	</view>
+</view>
+<!-- 轮播图 -->
+<!-- <swiper autoplay="{{autoplay}}"  interval="{{interval}}" duration="{{duration}}"
+  previous-margin="{{previousMargin}}" next-margin="{{nextMargin}}" circular="{{circular}}"
+  bindchange="swiperBindchange">
+  <block wx:for="{{bannerList}}"  wx:key="index" >
+    <swiper-item>
+      <image data-index="{{item.isJump}}" data-url="{{item.jumpUrl}}"  data-param="{{item.toParam}}" bindtap="toBannerDetail"  src="{{host}}{{item.url}}" class="slide-image {{currentSwiperIndex == index ? 'zoom-in' : 'zoom-out'}}" />
+      <view class="bannerTitle">{{item.title}}</view>
+      <view class="bannerDescribes">{{item.describes}}</view>
+    </swiper-item>
+  </block>
+</swiper> -->
+<!-- 轮播 -->
+<swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" previous-margin="{{previousMargin}}" next-margin="{{nextMargin}}" circular="{{circular}}" bindchange="swiperBindchange">
+	<block wx:for="{{bannerList}}" wx:key="index">
+		<swiper-item>
+			<view class="swiper_item">
+				<image data-id='{{item.id}}' data-index="{{item.isJump}}" data-url="{{item.jumpUrl}}" data-param="{{item.toParam}}" bindtap="toBannerDetail" src="{{host}}{{item.url}}" class="slide-image {{currentSwiperIndex == index ? 'zoom-in' : 'zoom-out'}}" />
+				<!-- <view class="swiper_item_text" wx:if='{{currentSwiperIndex == index}}'>
+          <view class="item_text_up">{{item.title}}</view>
+        </view> -->
+			</view>
+		</swiper-item>
+	</block>
+</swiper>
+<!-- 中心区 -->
+<view class="middle">
+	<view class="area" bindtap="toNews">
+		<image class="icon-1" src="{{iconUrl}}/img_1.png"></image>
+		<text class="cont">新闻报道</text>
+	</view>
+	<!-- <view class="area">
+		<image class="icon-1" src="{{iconUrl}}/img_2.png" bindtap="toLive"></image>
+		<text class="cont">在线直播</text>
+	</view> -->
+	<view class="area">
+		<image class="icon-1" src="{{iconUrl}}/img_3.png" bindtap="toPicture"></image>
+		<text class="cont">图片集锦</text>
+	</view>
+	<!-- <view class="area" bindtap="toColumnHf">
+		<image class="icon-1" src="{{iconUrl}}/img_4.png"></image>
+		<text class="cont">精彩回放</text>
+	</view> -->
+	<view class="area" bindtap="toHealth">
+		<image class="icon-1" src="{{iconUrl}}/img_5.png"></image>
+		<text class="cont">健康码</text>
+	</view>
+	<!-- <view class="area">
+		<image class="icon-1" src="{{iconUrl}}/img_6.png"></image>
+		<text class="cont">龙城e报</text>
+	</view> -->
+	<!-- <view class="area">
+		
+	</view>
+	<view class="area">
+		
+	</view> -->
+	<!-- <view class="area" bindtap="toGuide">
+    <image class="icon-1" src="{{iconUrl}}/guide_wl.png"></image>
+    <text class="cont">导览</text>
+  </view> -->
+</view>
+<!-- 搜索 -->
+<!-- <view class="wrap">
+	<view class="shadow"></view>
+	<view class="search_box">
+		<van-search input-class='search_input' custom-class='search_custom' value="{{ value }}" placeholder="搜索图文直播" use-action-slot bind:search="onSearch">
+		</van-search>
+	</view>
+</view> -->
+<!-- 导览 -->
+<view class="scenery">
+	<!-- 正式代表 -->
+	<view class="meeting">
+		<image bindtap="toNotebook" class="leftTance" src="{{iconUrl}}/note_wl.png"></image>
+	</view>
+	<!-- 特邀嘉宾 -->
+	<view class="meeting">
+		<image bindtap="toNotebookTwo" class="leftTance" src="{{iconUrl}}/note_1_wl.png"></image>
+	</view>
+	<view bindtap="toAllGuide">
+		<image class="observe pic1" src="{{iconUrl}}/guideHome_wl.png"></image>
+	</view>
+
+</view>
+<view class="toNext" bindtap="toTravel">
+	<image class="ticket" src="{{iconUrl}}/banner_wl.png"></image>
+</view>
+<!-- 新闻快讯 -->
+<view>
+	<view class="headline">资讯速递</view>
+</view>
+<view class="main" wx:for="{{newsList}}" wx:key="index" bindtap="toNewsDetail" data-index="{{item.id}}">
+	<view>
+		<image class="main_img" src="{{host}}{{item.coverUrl}}"></image>
+	</view>
+	<view>
+		<view class="txt-title">{{item.title}}</view>
+		<view class="txt-p foot">{{item.describes}}</view>
+		<view class="txt-p">{{item.createTime}}</view>
+	</view>
+</view>
+<!-- bg弹窗 -->
+<!-- <view wx:if="{{bgModel}}" class="bg_model">
+</view> -->
+<!-- 报到弹窗 -->
+<!-- <view wx:if="{{signInModel}}" class="signin_model">
+	<view class="sign_title">
+		报到
+	</view>
+
+	<view class="input_box">
+		<view class="lable_input">
+			姓名
+		</view>
+		<view>
+			<input class="user_input" placeholder="请输入您的姓名" bindinput="bindKeyName" value="{{signName}}" />
+		</view>
+	</view>
+	<view class="input_box">
+		<view class="lable_input">
+			手机号
+		</view>
+		<input class="user_input" type="number"  placeholder="请输入您的手机号" value="{{signPhone}}" bindinput="bindKeyTel" />
+	</view>
+	<view class="sign_btn" bindtap="handleSign">
+		立即报到
+	</view>
+
+
+
+</view>
+<!-- 已报到 -->
+<view wx:if="{{signedModel}}" class="signin_model signed">
+<image class="signedimg" mode="widthFix" src="../../images/signed.png" />
+  
+	<view class="signed_title">
+		恭喜！报到成功
+	</view>
+
+	<view class="signed_user top90">
+		<view class="lable_input">
+			姓名 : 
+		</view>
+		<view class="user_fz">
+			{{signName}}
+		</view>
+	</view>
+	<view class="signed_user">
+		<view class="lable_input">
+			单位 : 
+		</view>
+		<view class="user_fz">
+			{{signPhone}}
+		</view>
+		  
+	</view>
+	<view class="sign_btn" bindtap="handleSigned">
+		确 定
+	</view>
+
+
+
+</view>

@@ -1,0 +1,3 @@
+<!--pages/note/special/index.wxml-->
+<web-view src="https://lzzhly.wglj.liuzhou.gov.cn/meeting_2/index.html"></web-view>
+<!-- <text>pages/note/special/index.wxml</text> -->

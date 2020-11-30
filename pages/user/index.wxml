@@ -1,0 +1,99 @@
+<!--pages/user/index.wxml-->
+<image class="backGround" src="{{iconUrl}}/background_wl.png"></image>
+<van-nav-bar id="nav-bar" fixed='{{true}}' placeholder='{{true}}' border='{{false}}' custom-class='back_class' bind:click-left="onClickLeft">
+	<view slot="left" class="nav_left">
+		<!-- <van-icon name="arrow-left" /> -->
+		<text>联系我们</text>
+	</view>
+</van-nav-bar>
+<view style="display: flex; justify-content: center;">
+	<!-- <van-nav-bar class="nav-bar" left-text="联系我们"></van-nav-bar> -->
+	<view class="header" wx:if="{{userInfor!=null&&userInfor!=''}}">
+		<view class="header_left">
+			<view class="title">{{userInfor.nickName}}</view>
+			<view class="call">{{userInfor.mobile}}</view>
+			<view class="authentication" bindtap="toAuthentication">
+				<view class="sm" wx:if="{{!authentication}}"><image class="button_img" src="{{iconUrl}}/authentication_1.png" />未实名</view>
+					<view class="sm wsm" wx:else><image class="button_img" src="{{iconUrl}}/authentication_2.png" />已实名</view>
+			</view>
+		</view>
+		<image class="photo" src="{{userInfor.headImg}}"></image>
+	</view>
+	<view class="header" wx:else>
+		<view class="login">
+			<image class="advator" src="{{iconUrl}}/advator.png"></image>
+			<button class="btn" open-type="getUserInfo" bindgetuserinfo="getPerson">立即登录</button>
+		</view>
+	</view>
+</view>
+<view class="flexai">
+	<view class="middle" bindtap="tabsContact">联系我们</view>
+	<!-- <view class="middle" bindtap="tabsSign"  wx:if="{{signInList !== []}}"> -->
+	<view class="middle" bindtap="tabsSign"  wx:if="{{checkInRecord}}">
+		报到记录
+	</view>
+</view>
+
+<!-- <scroll-view scroll-y="true" style="height: 760rpx;" wx:if="{{current==0}}"> -->
+<scroll-view scroll-y="true" style="height: 760rpx;" wx:if="{{current==0}}">
+
+	<!-- <view class="all all-2" bindtap="toCall"> 
+    <text class="txt">联系我们</text>
+    <image class="icon" src="{{iconUrl}}/right.png"></image>
+</view> -->
+	<view class="main mainContent" wx:for="{{typeList}}" wx:key="index">
+		<view class="title-1">
+			<view class="span"></view>
+			<view class="mannager">{{item.typeName}}</view>
+		</view>
+		<view class="cont" wx:for="{{item.contacts}}" wx:for-item="contactItem" wx:key="contactItem">
+			<text class="name" space="ensp" decode="{{true}}">{{contactItem.contactName}}</text>
+			<view class="phone" bindtap="toPhone" data-id="{{contactItem.contactTel}}">
+				<!-- <view class="num">{{contactItem.contactTel}}</view> -->
+				<view class="num">
+					<text wx:for='{{contactItem.contactTel}}' wx:key="index" wx:for-item='it'>{{it}}</text>
+				</view>
+				<image class="icon" src="{{iconUrl}}/phone_wl.png"></image>
+			</view>
+		</view>
+	</view>
+</scroll-view>
+
+<!-- 报到记录 -->
+<!-- <scroll-view scroll-y="true" style="height: 760rpx;" wx:if="{{current==1}}">
+	<view class="main mainContent" wx:for="{{signInList}}" wx:key="index">
+		<view class="cont">
+			<view class="name">姓名</view>
+			<view class="phone" bindtap="toPhone" data-id="{{contactItem.contactTel}}">
+				<view class="num">
+					{{item.name}}
+				</view>
+				<image class="icon" src="{{iconUrl}}/phone_wl.png"></image>
+			</view>
+		</view>
+	</view>
+</scroll-view> -->
+<view wx:if="{{current==1}}">
+	<view class="signedbox" wx:for="{{signInList}}" wx:key="index">
+		<view class="sign_item">
+		<view>	姓名</view><view class="sign_info">
+				{{item.name}}
+			</view>
+
+		</view>
+		<view  class="sign_item">
+		<view>	单位</view><view class="sign_info">
+				{{item.company}}
+			</view>
+		</view>
+		<view  class="sign_item">
+		<view>	报到时间</view><view class="sign_info">
+				{{item.createTime}}
+			</view>
+		</view>
+
+	</view>
+	<view class="loading" hidden="{{searchLoading}}" bindtap="onClickMore">点击载入更多...</view>  
+	<view class="loading" hidden="{{!searchLoading}}">已加载全部</view>
+
+</view>

@@ -1,0 +1,12 @@
+{
+  "usingComponents": {
+    "van-nav-bar": "/vant/nav-bar/index",
+    "van-notice-bar": "/vant/notice-bar/index",
+    "van-search": "/vant/search/index",
+    "van-dialog": "/vant/dialog/index",
+    "van-overlay": "/vant/overlay/index",
+    "van-popup": "/vant/popup/index"
+  },
+  "navigationStyle": "custom",
+  "pageOrientation": "portrait"
+}

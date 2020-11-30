@@ -1,0 +1,67 @@
+<!--pages/index/guide/guideMap/index.wxml-->
+<van-nav-bar id="nav-bar" fixed='{{true}}' placeholder='{{true}}' border='{{false}}' custom-class='back_class'  bind:click-left="onClickLeft">
+	<view slot="left" class="nav_left">
+		<van-icon name="arrow-left" />
+		<text>导览</text>
+	</view>
+</van-nav-bar>
+<view class="attractions">
+  <view class="upper">
+    <view class="head">
+      <van-tabs id="page-tab" active="{{ currentTab }}" bind:change="tabChange" color="#326ced">
+        <van-tab wx:for="{{tabList}}" wx:key='index' title="{{item.name}}"></van-tab>
+      </van-tabs>
+    </view>
+    <view class="map-box">
+      <!-- <canvas id="map-canvas" class="map-canvas" style="height: {{canvasInfo.height }}px"  bindtouchstart="touchStartHandle" bindtouchmove="touchMoveHandle" bindtouchend="touchendHandle" canvas-id="canvas-map"></canvas> -->
+       <custom-map bindinitedMap="initedMap" options="{{options}}" navBarHeight="{{navBarHeight}}"></custom-map>
+    </view>
+    <!-- <view class="img_one">
+      <image bindtap="showMsg" class="middle" src="{{iconUrl}}/destination-hover.png"></image>
+    </view>
+    <view class="img_two">
+      <image bindtap="showMsg" class="middle" src="{{iconUrl}}/destination-hover.png"></image>
+    </view>
+    <view class="img_three">
+      <image bindtap="showMsg" class="middle" src="{{iconUrl}}/destination-hover.png"></image>
+    </view> -->
+  </view>
+  <view class="information" wx:if='{{showInformation}}'>
+    <view class="information_box">
+      <view class="information_box_up">
+        <view>
+          <image class="information_img" src="{{host}}{{currentPoint.abbreviationFileUrl}}"></image>
+        </view>
+        <view class="information_msg">
+          <view class="information_name">{{currentPoint.name}}</view>
+          <view class="information_box_msg">{{currentPoint.description}}</view>
+        </view>
+      </view>
+      <view class="information_button">
+        <button class="box_buttom" bindtap="toLocation"> 去这里</button>
+        <button class="box_buttom"> 语音讲解</button>
+
+        <!-- <van-button block='{{true}}' custom-class='box_buttom' size="small" icon="star-o" color="#e7d08e" round>去这里</van-button>
+        <van-button size="small" icon="star-o" color="#e7d08e" round type="info">语音讲解</van-button> -->
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class="lower">
+  <view class="list_item_text">
+    <text class="name">{{scenicDetail.name}} <text class="tag">{{scenicDetail.starLevel}}</text> </text>
+    <text class=""></text>
+  </view>
+  <view class="list_item_text">
+    <text class="time">开放时间：{{scenicDetail.openTime}}-{{scenicDetail.closeTime}}</text>
+    <text class="person_number">{{scenicDetail.currentTourism}}人</text>
+  </view>
+  <view class="list_item_text">
+    <text class="time">景区地址：{{scenicDetail.position}}</text>
+    <text class="type">正在游玩</text>
+  </view>
+</view>
+<!-- <view class="map">
+  <image mode='scaleToFill' src='{{mapsrc}}' bindtouchstart='touchStartHandle' bindtouchmove='touchMoveHandle' bindload='load' style="width: {{ touch.scaleWidth }}px;height: {{ touch.scaleHeight }}px"></image>
+</view> -->

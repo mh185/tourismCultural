@@ -1,0 +1,18 @@
+<!--pages/index/column/index.wxml-->
+<van-nav-bar id="nav-bar" fixed='{{true}}' placeholder='{{true}}' border='{{false}}' custom-class='back_class' bind:click-left="onClickLeft">
+	<view slot="left" class="nav_left">
+		<van-icon name="arrow-left" />
+		<text>新闻报道专栏</text>
+	</view>
+</van-nav-bar>
+<view class="main" wx:for="{{newsList}}" wx:key="index" bindtap="toNewsDetail" data-index="{{item.id}}">
+  <view>
+    <!-- <image class="img" src="{{host}}{{item.coverUrl}}" mode="widthFix"></image> -->
+    <image class="img" src="{{host}}{{item.coverUrl}}"></image>
+  </view>
+  <view>
+    <view class="txt-title">{{item.title}}</view>
+    <view class="txt-p foot">{{item.describes}}</view>
+    <view class="txt-p">{{item.createTime}}</view>
+  </view>
+</view>

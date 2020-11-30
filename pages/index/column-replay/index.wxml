@@ -1,0 +1,32 @@
+<image class="backGround" src="{{iconUrl}}/background_wl.png"></image>
+<van-nav-bar id="nav-bar" fixed='{{true}}' placeholder='{{true}}' border='{{false}}' custom-class='back_class'  bind:click-left="onClickLeft">
+	<view slot="left" class="nav_left">
+		<van-icon name="arrow-left" />
+		<text>精彩回放</text>
+	</view>
+</van-nav-bar>
+<!-- <view wx:for="{{listData}}" wx:key="index" bindtap="toRadio" data-id="{{item.id}}">
+  <image class="radio" src="{{host}}{{item.coverUrl}}"></image>
+  <view class="title">
+  {{item.title}}
+  </view>
+  <view>
+    <image class="icon" src="../../images/like.png"></image>
+    <text class="num">{{item.likeCount}}</text>
+    <image class="icon" src="../../images/eye.png"></image>
+    <text class="num">{{item.watchCount}}</text>
+  </view>
+</view> -->
+<view class="wrap" wx:for="{{listData}}" wx:key="index" bindtap="toRadio" data-id="{{item.id}}">
+  <image class="img" src="{{host}}{{item.coverUrl}}"></image>
+  <!-- <view class="hot">HOT</view> -->
+  <image class="hot" src="{{iconUrl}}/huore.png"></image>
+	<image class="huomiao" src="{{iconUrl}}/huomiao.gif"></image>
+  <image class="adv" src="{{iconUrl}}/advator_wl.png"></image>
+  <view class="tv">柳州市文化广电和旅游局</view>
+  <view class="footer">
+    <view class="title">{{item.title}}</view>
+  </view>
+</view>
+
+

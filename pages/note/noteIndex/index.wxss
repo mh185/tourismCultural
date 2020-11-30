@@ -1,0 +1,122 @@
+/* pages/note/noteIndex/index.wxss */
+.van-nav-bar__left,.van-nav-bar__right {
+  bottom: unset !important;
+}
+.nav_left{
+  display: flex;
+  font-size: 40rpx;
+  color: #000000;
+  font-weight: 500;
+  font-family: Source Han Serif CN;
+}
+.nav_left .nav_left_text{
+    margin-left:224rpx;
+}
+.wrap{
+  font-size: 48rpx;
+  font-family: Microsoft YaHei;
+  font-weight: bold;
+  line-height: 40rpx;
+  color: #30318B;
+  opacity: 1;
+  margin: 32rpx 0 16rpx 32rpx;
+}
+.backGround{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -99;
+}
+.travel{
+  margin-left: 50rpx !important;
+}
+.main{
+  width: 690rpx;
+  height: 100vm;
+  background: #FFFFFF;
+  opacity: 1;
+  margin: 58rpx 30rpx 0 30rpx;
+  overflow: hidden;
+}
+.title{
+  display: flex;
+  justify-content: space-between;
+}
+.txt{
+  font-size: 32rpx;
+  font-family: PingFang SC;
+  font-weight: bold;
+  line-height: 40rpx;
+  color: #30318B;
+  opacity: 1;
+  margin-top: 32rpx;
+  /* margin-right: 30rpx; */
+}
+.icon{
+  width: 32rpx;
+  height: 24rpx;
+  margin: 38rpx 30rpx 26rpx 12rpx;
+}
+.right{
+  display: flex;
+}
+.line{
+  width: 626rpx;
+  height: 4rpx;
+  background: #30318B;
+  margin: 0 32rpx;
+  opacity: 1;
+}
+.circle{
+  width: 20rpx;
+  height: 20rpx;
+  background: #30318B;
+  opacity: 1;
+  border-radius: 50%;
+  margin: 60rpx 0 0rpx 32rpx;
+}
+.circleTwo{
+  background-color: #EBA96F;
+}
+.one{
+  display: flex;
+  /* justify-content: center; */
+}
+.num{
+  font-size: 28rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  line-height: 40rpx;
+  color: #333333;
+  opacity: 1;
+  margin-top: 52rpx;
+  margin-left: 60rpx;
+}
+.xuLine{
+  margin-left: 40rpx;
+  margin-top: 48rpx;
+}
+.word{
+  font-size: 32rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #333333;
+  opacity: 1;
+  margin-left: 108rpx;
+  margin-top: 48rpx;
+}
+.sb{
+  font-size: 32rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #333333;
+  opacity: 1;
+  padding-left: 112rpx;
+  margin-top: 48rpx;
+  margin-right: 0 !important;
+  position: absolute;
+  right: 22rpx;
+  top: 878rpx;
+}

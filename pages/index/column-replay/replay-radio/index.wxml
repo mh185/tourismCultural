@@ -1,0 +1,57 @@
+<!--pages/live/radio/index.wxml-->
+<van-nav-bar id="nav-bar" fixed='{{true}}' placeholder='{{true}}' border='{{false}}' custom-class='back_class'  bind:click-left="onClickLeft">
+	<view slot="left" class="nav_left">
+		<van-icon name="arrow-left" />
+		<text>精彩回放</text>
+	</view>
+</van-nav-bar>
+<video class="radio" src="{{detailList.meetingUrl}}"></video>
+<view class="title">
+	{{detailList.title}}
+	<!-- <text class="txt" bindtap="toMake">生成海报</text> -->
+	<!-- <image bindtap="toMake" class="icon" src="{{iconUrl}}/share.png"></image> -->
+</view>
+<view class="time">会议时间：{{detailList.startTime}}-{{detailList.endTime}}</view>
+<view class="address">会议地点：{{detailList.meetingPlace}}</view>
+<view class="cont">
+	<view class="title-1">会议简介</view>
+	<view class="txt-1">{{detailList.profiles}}</view>
+</view>
+<!-- 图文直播 -->
+<!-- <view class="title-2">会议留言</view> -->
+<!-- <view class="message">
+	<image class="avator" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1602793217555&di=0244c56106f19f14439fb51ce06e3773&imgtype=0&src=http%3A%2F%2Fpic2.zhimg.com%2F50%2Fv2-dabd289dd21a5cf4967cb9b710cee36f_hd.jpg"></image>
+	<text class="txt-2">李先生</text>
+	<text class="txt-3">10分钟前</text>
+	<view class="word">立足区域自然生态、民族文化资源，开发民族文化体验、农副产业特色观光、乡村田园休闲体验等项目。积极做好重点旅游项目的筛选论证，精心组织编制重点旅游项目建议书和可行性研究报告，建立较为完善的旅游项目储备库。</view>
+</view>
+<view class="message">
+	<image class="avator" src="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=2409835579,2565692553&fm=26&gp=0.jpg"></image>
+	<text class="txt-2">张女士</text>
+	<text class="txt-3">20分钟前</text>
+	<view class="word">把旅游招商引资与旅游项目前期工作、宣传促销、机制创新紧密结合起来，通过对外经贸洽谈、旅游交易会、网络招商等形式，搞活景区景点推介招商，带动土特产品交易市场，积极促进旅游项目与开发业主的对接，进一步加快重点旅游项目招商引资和市场化运作步伐，逐步形成政府、企业、社会共同投入开发旅游业的良好氛围。</view>
+</view>
+<view class="message">
+	<image class="avator" src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=2784169426,1570108952&fm=26&gp=0.jpg"></image>
+	<text class="txt-2">郭先生</text>
+	<text class="txt-3">35分钟前</text>
+	<view class="word">积极发展旅游娱乐项目。针对各个层次、不同类型游客的特点，开发互动参与性强、具有地方特色的旅游娱乐消费项目，针对年轻游客群，开发户外运动游、登山等体验式项目活动；针对儿童群，开发陶吧、堆沙、戏水等项目活动。</view>
+</view>
+<view class="message">
+	<image class="avator" src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=2639703327,3455107280&fm=26&gp=0.jpg"></image>
+	<text class="txt-2">陈先生</text>
+	<text class="txt-3">50分钟前</text>
+	<view class="word">会展旅游作为一种新型的旅游产品已经引起学界与业界的广泛关注,但对于其内涵仍然是"仁者见仁,智者见智",这对于会展旅游的发展造成了障碍</view>
+</view> -->
+<view class="footer">
+	<!-- <image class="long" src="../../../images/long.png"></image> -->
+
+	<view class="all">
+    <button open-type="share" class="btn" plain="true" bindtap="toShare">
+			<image class="iconShare" src="{{iconUrl}}/route.png"></image>
+		</button>
+		<text class="num">{{detailList.shareCount}}</text>
+		<van-icon bindtap="onthumbsUp" name="good-job-o" class="icon-1" color="{{detailList.userIsLike?'red':''}}"/>
+		<text class="num" bindtap="onthumbsUp">{{detailList.likeCount}}</text>
+	</view>
+</view>

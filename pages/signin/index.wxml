@@ -1,0 +1,43 @@
+<!--pages/signin/index.wxml-->
+<image class="backGround" src="{{iconUrl}}/background_wl.png"></image>
+<van-nav-bar id="nav-bar" fixed='{{true}}' placeholder='{{true}}' border='{{false}}' custom-class='back_class' bind:click-left="onClickLeft">
+	<view slot="left" class="nav_left">
+		<!-- <van-icon name="arrow-left" /> -->
+		<text>报到</text>
+	</view>
+</van-nav-bar>
+<view class="sign_bj">
+  <view class="sign_title">
+    <image src="../../images/sign_title.png" />
+  </view>
+  <view class="sign_cent">
+    <view class="ren">
+      <image src="../../images/ren.png" />
+
+    </view>
+    <view class="sign-text">
+      {{title}}
+    </view>
+    <view>
+      <view class="input_box">
+        <view class="lable_input">
+          姓名
+        </view>
+        <view>
+          <input class="user_input" placeholder="请输入您的姓名" bindinput="bindKeyName" value="{{signName}}" disabled="{{isDis}}"/>
+        </view>
+      </view>
+      <view class="input_box">
+        <view class="lable_input">
+          单位
+        </view>
+        <view>
+          <input class="user_input" placeholder="请输入所属单位" bindinput="bindKeyTel" value="{{signPhone}}" disabled="{{isDis}}"/>
+        </view>
+      </view>
+    </view>
+    <view class="sign_btn" bindtap="handleSign" wx:if="{{isShwo}}">
+      立即报到
+    </view>
+  </view>
+</view>

@@ -1,0 +1,189 @@
+/* pages/more/attractions/attractionsDetail/index.wxss */
+.head{
+  position: relative;
+}
+.head_img {
+  width: 100%;
+  height: 100%;
+}
+.head swiper {
+  height: 415rpx;
+}
+.current_class{
+  position: absolute;
+  width: 68rpx;
+  height: 40rpx;
+  opacity: 0.7;
+  background: #050505;
+  border-radius: 20rpx;
+  color: #fff;
+  font-size: 24rpx;
+  text-align: center;
+  line-height: 40rpx;
+  bottom: 60rpx;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.content {
+  padding: 0 30rpx;
+}
+
+.content_box {
+  padding: 30rpx;
+  margin-top: -30rpx;
+  background: #fff;
+  border-radius: 8rpx;
+  box-shadow: 0rpx 6rpx 12rpx 0rpx rgba(0, 0, 0, 0.04);
+  z-index: 100;
+  position: relative;
+}
+
+.content_box_head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18rpx;
+
+}
+.box_left {
+  display: flex;
+  align-items: center;
+  justify-content: end;  
+}
+.box_title {
+  font-size: 36rpx;
+  font-family: PingFang SC, PingFang SC-Semibold;
+  font-weight: 600;
+  color: #1d1d1d;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: pre-wrap;
+  width:400rpx;
+}
+.box_a {
+  /* margin-left: 10rpx; */
+  width: 88rpx;
+  height: 30rpx;
+  background: #326ced;
+  border-radius: 16rpx 0rpx 16rpx 0rpx;
+  font-size: 20rpx;
+  font-family: Source Han Serif CN, Source Han Serif CN-Medium;
+  font-weight: 500;
+  line-height: 30rpx;
+  text-align: center;
+  color: #ffffff;
+}
+.box_title_right {
+  font-size: 20rpx;
+  font-weight: 500;
+  color: #676767;
+}
+
+.box_head_img {
+  width: 30rpx;
+  height: 30rpx;
+  margin-right: 10rpx;
+}
+.box_right_img{
+  width: 22rpx;
+  height: 22rpx;
+}
+.temperature {
+  font-size: 24rpx;
+  font-family: PingFang SC, PingFang SC-Regular;
+  font-weight: 400;
+  color: #326ced;
+}
+#call{
+  font-size: 20rpx;
+  font-family: PingFang SC, PingFang SC-Light;
+  font-weight: 300;
+  color: #326ced;
+  margin-right: 12rpx;
+}
+.prince {
+  font-size: 18rpx;
+  color: #f55;
+}
+
+.prince_num {
+  font-size: 28rpx;
+}
+.address{
+  width: 512rpx;
+
+}
+.time {
+  font-size: 20rpx;
+  font-weight: 500;
+  color: #676767;
+}
+
+.introduce {
+  font-size: 24rpx;
+  font-weight: 500;
+  color: #1d1d1d;
+  line-height: 20px;
+  letter-spacing: 0px;
+  padding: 40rpx 0;
+}
+
+.person_number {
+  display: flex;
+  justify-content: space-around
+}
+.person_number{
+  margin-top: 30rpx;
+}
+.person_number_box{
+  text-align: center
+}
+.number {
+  font-size: 40rpx;
+  font-family: PingFang SC, PingFang SC-Regular;
+  font-weight: 400;
+  color: #326ced;
+}
+
+.number_introduce {
+  font-size: 18rpx;
+  font-weight: 500;
+  color: #c8c8c8;
+}
+.title{
+  margin-top: 60rpx;
+  font-size: 14px;
+  font-weight: 800;
+  color: #000000;
+  margin-bottom: 20rpx;
+}
+.scenic_img{
+  margin-top: 20rpx;
+  width: 100%;
+  height: 270rpx;
+}
+.scenic_text{
+  margin-top: 20rpx;
+  font-size: 24rpx;
+  font-weight: 500;
+  color: #1d1d1d;
+  line-height: 20px;
+  letter-spacing: 0px;
+  text-align: justify;
+}
+.van-nav-bar__left,.van-nav-bar__right {
+  bottom: unset !important;
+}
+.nav_left{
+  display: flex;
+  font-size: 40rpx;
+  color: #000000;
+  font-weight: 500;
+  font-family: Source Han Serif CN;
+}
+.nav_left .nav_left_text{
+    margin-left:224rpx;
+}
+.rich{
+  overflow: hidden;
+}

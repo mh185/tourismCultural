@@ -1,0 +1,67 @@
+<!--pages/note/noteIndex/index.wxml-->
+<image class="backGround" src="{{iconUrl}}/background_wl.png"></image>
+<van-nav-bar id="nav-bar" fixed='{{true}}' placeholder='{{true}}' border='{{false}}' custom-class='back_class'
+  bind:click-left="onClickLeft">
+  <view slot="left" class="nav_left">
+    <van-icon name="arrow-left" />
+    <text>会务手册-目录</text>
+  </view>
+</van-nav-bar>
+<view class="main">
+  <view class="title">
+    <view class="wrap">目录</view>
+    <view class="right" bindtap="toAll">
+      <view class="txt">查看全部</view>
+      <image class="icon" src="../../../images/home.png"></image>
+    </view>
+  </view>
+  <view class="line"></view>
+  <view class="one" bindtap="toOne">
+    <view class="circle"></view>
+    <view class="num">一</view>
+    <view class="xuLine">----------</view>
+    <view class="word">日常安排</view>
+  </view>
+  <view class="one" bindtap="toTwo">
+    <view class="circle circleTwo"></view>
+    <view class="num">二</view>
+    <view class="xuLine">----------</view>
+    <view class="word">参会人员名单</view>
+  </view>
+  <view class="one" bindtap="toThree">
+    <view class="circle"></view>
+    <view class="num">三</view>
+    <view class="xuLine">----------</view>
+    <view class="word">分组安排</view>
+  </view>
+  <view class="one" bindtap="toFour">
+    <view class="circle circleTwo"></view>
+    <view class="num">四</view>
+    <view class="xuLine">----------</view>
+    <view class="word">用餐安排</view>
+  </view>
+  <view class="one" bindtap="toFive">
+    <view class="circle"></view>
+    <view class="num">五</view>
+    <view class="xuLine">----------</view>
+    <view class="word">广西文化旅游概况</view>
+  </view>
+  <view class="one" bindtap="toSix">
+    <view class="circle circleTwo"></view>
+    <view class="num">六</view>
+    <view class="xuLine">----------</view>
+    <view class="word">柳州市情概况</view>
+  </view>
+  <view class="one" bindtap="toSeven">
+    <view class="circle"></view>
+    <view class="num">七</view>
+    <view class="xuLine">----------</view>
+    <view class="word">考察点简介</view>
+  </view>
+  <view class="one" bindtap="toEight">
+    <view class="circle circleTwo"></view>
+    <view class="num">八</view>
+    <view class="xuLine">----------</view>
+    <view class="word">大会服务</view>
+  </view>
+</view>
